@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  web:
+    image: python:3.9-slim
+    ports:
+      - "5001:5000"
+    command: python -c "print('Hello from Docker Compose Web Service!')"
+  cache:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
